@@ -18,18 +18,9 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-hoi {}, my name is {}! if you have any questions about how to use me please give me /help... 
-
-im a group manager bot maintained by  [this person](tg://user?id={}).
-
-My future updates will be put into This Channel - @MarieChechi & My Support Group @InFoTelGroup.
-
-This is my [Deploy Code](https://heroku.com/deploy?template=https://github.com/TGExplore/Marie-2.0-English),
-you can create clone same like me..
-
-For more commands click /help...
-
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
+hoi {}, my name is {}! , Im a group manager bot maintained by  👉[this person](tg://user?id={}).
+Iam Created For @TrollJunction Group...
+And I will not work in any other groups..!!
 
 """
 
@@ -143,7 +134,10 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN)
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton(text=" 👥 Join Our group", url="t.me/trolljunction")], 
+                     [InlineKeyboardButton(text="🎬 Get Our Channel Links ", url="https://t.me/MJ_Linkz")],
+                     [InlineKeyboardButton(text="🎬 Join Our Community ", url="https://lynxinbio.com/yq749") ]])) )
     else:
         update.effective_message.reply_text("waked up😏😏😏")
 
