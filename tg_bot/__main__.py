@@ -137,7 +137,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text=" 👥 Join Our group", url="t.me/trolljunction")], 
                      [InlineKeyboardButton(text="🎬 Get Our Channel Links ", url="https://t.me/MJ_Linkz")],
-                     [InlineKeyboardButton(text="🎬 Join Our Community ", url="https://lynxinbio.com/yq749") ]])) )
+                     [InlineKeyboardButton(text="🎬 Join Our Community ", url="https://lynxinbio.com/yq749") ]]))
     else:
         update.effective_message.reply_text("waked up😏😏😏")
 
