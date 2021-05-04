@@ -10,12 +10,12 @@ class Config(object):
     LOGGER = True
 
     # REQUIRED
+    SQLALCHEMY_DATABASE_URI = 'mongodb+srv://tjadmnbot:<password>@cluster0.m7jj3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'  # needed for any database modules
     API_KEY = ""
     OWNER_ID = "683538773" # If you dont know, run the bot and do /id in your private chat with it
     OWNER_USERNAME = "ViruZs"
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = 'mongodb+srv://tjadmnbot:<password>@cluster0.m7jj3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'  # needed for any database modules
     MESSAGE_DUMP = None  # needed to make sure 'save from' messages persist
     LOAD = []
     NO_LOAD = ['translation', 'rss']
